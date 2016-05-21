@@ -13,4 +13,3 @@ test: &test
 
 production:
   adapter: postgresql
-  
