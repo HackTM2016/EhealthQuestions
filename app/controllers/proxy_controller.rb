@@ -6,6 +6,8 @@ class ProxyController < ApplicationController
 
   def get_articles(query = nil)
     query ||= params.select{|k,_| k.to_sym == :q}
+    puts query
+    Rails.logger.info query
     Faraday.get("http://hacktm.ness.ro:8983/solr/article/select", {wt: :json, q: query})
   end
 end
