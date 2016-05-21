@@ -1,19 +1,11 @@
 class ProxyController < ApplicationController
   def index
-    rsp = get_articles('?q=body : cancer&wt=json&indent=true')
-    rsp = JSON.parse(rsp)
-
-    respond_to do |format|
-
-      format.json do
-        response.headers['Access-Control-Allow-Origin'] = '*'
-        render :json => rsp
-      end
-    end
+    response.headers['Access-Control-Allow-Origin'] = '*'
+    render :json => (get_articles rescue MultiJson.load(open('test/index.json')))
   end
 
-  def get_articles(query)
-    uri = URI("http://hacktm.ness.ro:8983/solr/article/select#{query}")
-    Net::HTTP.get(uri)
+  def get_articles(query = nil)
+    query ||= params.select{|k,_| k.to_sym == :q}
+    Faraday.get("http://hacktm.ness.ro:8983/solr/article/select", {wt: :json, q: query})
   end
 end
