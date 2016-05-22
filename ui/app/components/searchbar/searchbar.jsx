@@ -15,8 +15,8 @@ export default class Searchbar extends Component {
     };
 
     // Autosearch (comment them in the end)
-    this.state.query = 'tamoxifen';
-    this.search();
+    // this.state.query = 'tamoxifen';
+    // this.search();
 
     search.register((query) => {
       this.setState({ ...this.state, query }, this.search.bind(this));
@@ -85,14 +85,15 @@ export default class Searchbar extends Component {
     return (
       <div className="searchbar">
         <Grid>
-          <Cell col={ 2 }>
-            eHealth Questions
-          </Cell>
           <Cell col={ 2 } className="hacktm-logo"/>
+          <Cell col={ 1 } className="ness-logo"/>
+          <Cell col={ 3 } className="app-logo">
+            Health <span>Questions</span>
+          </Cell>
           <Cell col={ 4 }>
             <Textfield
               label="Search"
-              placeholder="Start by searching for something (e.g. 'Breast Cancer')"
+              placeholder="Start searching here"
               value={ query }
               style={{width: '100%'}}
               onChange={ onChange }
@@ -100,17 +101,12 @@ export default class Searchbar extends Component {
           </Cell>
           <Cell col={ 2 }>
             <Button
+              className="search-button"
               raised
-              colored
               onClick={ search }
               disabled={ !enabled }>
               Search
             </Button>
-          </Cell>
-          <Cell col={ 2 }>
-            <Switch ripple id="switch1" onChange={ onViewChange }>
-              { state.view }
-            </Switch>
           </Cell>
         </Grid>
       </div>

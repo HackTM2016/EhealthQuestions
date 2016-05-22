@@ -1,6 +1,8 @@
+
+
 .searchbar {
   width: 100%;
-  background-color: #05335C;
+  
   color: white;
 }
 
@@ -12,7 +14,62 @@
   padding-top: 10px;
 }
 
+.searchbar .mdl-textfield__input {
+  font-size: 18px;
+  height: 40px;
+  border: none;
+  font-weight: 100;
+  border-radius: 5px;
+  background: rgba(255,255,255,.1);
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.searchbar .mdl-textfield__input::-webkit-input-placeholder {
+  color: rgba(255,255,255,.3);
+}
+
+.searchbar .mdl-textfield__label {
+  display: none;
+}
+
+.searchbar .search-button {
+  height: 40px;
+  margin-top: 9px;
+  border-radius: 5px;
+  color: #05335c;
+  font-weight: bold;
+  background: rgba(255,255,255,.9);
+}
+
+.searchbar .search-button[disabled] {
+  background: rgba(255,255,255,.1);
+  color: rgba(255,255,255,.25);
+}
+
+.searchbar .hacktm-logo,
+.searchbar .ness-logo {
+  margin-top: -6px;
+}
+
 .searchbar .hacktm-logo {
-  background: url('./assets/logo2x.png') no-repeat #05335C 50% 50%;
+  background: url('./assets/logo2x.png') no-repeat 50% 50%;
   background-size: 75%;
+}
+
+.searchbar .ness-logo {
+  background: url('./assets/ness-logo.svg') no-repeat 50% 50%;
+  background-size: 50px 50px;
+}
+
+.searchbar .app-logo {
+  background: url('./assets/small-e.png') no-repeat 35px 25%;
+  padding-left: 65px;
+  background-size: 30px;
+  font-weight: 200;
+  line-height: 57px;
+  text-align: left;
+  font-size: 20px;
+  letter-spacing: -1px;
+  white-space: nowrap;
 }

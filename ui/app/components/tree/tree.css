@@ -1,6 +1,6 @@
 .tree {
   padding: 20px;
-  user-select: none;
+  background: linear-gradient(#fff, #f2f2f2);
 }
 
 .tree .node {
@@ -11,23 +11,29 @@
 }
 
 .tree .node .query {
-  color: #444;
   text-decoration: none;
 }
 
 .tree .node .query .count {
   font-weight: 200;
-  color: #999;
+  color: rgba(0,0,0,.3);
   margin-left: 10px;
 }
 
 .tree .node .articles {
-  // border-left: 1px solid #eee;
+  border-left: 1px solid rgba(0,0,0,.05);
 }
 
 .tree .node .articles .article {
-  color: #66a;
+  color: #444;
   cursor: pointer;
+}
+
+.tree .node .articles .article .article-title {
+  line-height: 1;
+  display: block;
+  margin: 5px 0;
+  color: #222;
 }
 
 .tree .node .articles .article[data-has-nodes=true] {
@@ -35,5 +41,5 @@
 }
 
 .tree .node .articles .article:hover {
-  color: #66c;
+  color: #777;
 }

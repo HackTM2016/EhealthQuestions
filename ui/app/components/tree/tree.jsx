@@ -86,7 +86,7 @@ export default class Tree extends Component {
                 key={ index }
                 onClick={ openArticle }
                 data-has-nodes={!!article.$$nodes.length}>
-                { article.articleTitle }
+                <span className="article-title">{ article.articleTitle }</span>
                 { nodesElement }
               </li>
             );
