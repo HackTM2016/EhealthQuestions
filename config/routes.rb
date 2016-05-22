@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get 'proxy/index'
-
+  get 'proxy/d3' => 'proxy#d3dataformatter'
+  match'drill' => 'proxy#d3show', via: :all
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
