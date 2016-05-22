@@ -1,7 +1,5 @@
 class ProxyController < ApplicationController
   rescue_from Exception do |exception|
-    Rails.logger.info(exception.to_s)
-    puts exception.to_s
     data = MultiJson.load(open('test/index.json'))
     response.headers['Access-Control-Allow-Origin'] = '*'
     render :json => data
@@ -9,14 +7,30 @@ class ProxyController < ApplicationController
 
   def index
     data = get_articles
+
     response.headers['Access-Control-Allow-Origin'] = '*'
     render :json => data
   end
 
   def get_articles(query = nil)
-    query ||= params.select{|k,_| k.to_sym == :q}
-    Faraday.get("http://hacktm.ness.ro:8983/solr/article/select", {wt: :json, q: query})
+    response = getting_articles_with_retry_because_the_solr_is_not_ha_because_it_costs query
+    response.is_a? Hash ? response : MultiJson.load(response.body)
   rescue
     MultiJson.load(open('test/index.json'))
   end
+
+  private
+    def getting_articles_with_retry_because_the_solr_is_not_ha_because_it_costs query
+      query ||= params.select{|k,_| k.to_sym == :q}
+
+      connection = Faraday.new(url: "http://hacktm.ness.ro:8983/solr/") do |c|
+        c.request :retry, max: 2, interval: 0.05, interval_randomness: 0.5, backoff_factor: 2
+        c.use Faraday::Request::UrlEncoded
+        c.use Faraday::Response::Logger
+        c.use Faraday::Adapter::NetHttp
+        c.use FaradayMiddleware::ParseJson,       content_type: 'application/json'
+      end
+
+      connection.get url: 'article/select', wt: :json, q: query
+    end
 end
