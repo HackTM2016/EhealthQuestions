@@ -18,6 +18,8 @@ class ProxyController < ApplicationController
   end
 
   def d3dataformatter
+    only_q_params
+    @q_params = {q: URI.encode(@q_params[:q])} if @q_params && @q_params[:q]
     data = load_json
 
     response.headers['Access-Control-Allow-Origin'] = '*'
@@ -80,7 +82,6 @@ class ProxyController < ApplicationController
   def only_q_params
     unless @q_params
       @q_params = params.select { |k, _| k.to_sym == :q }
-      @q_params = {q: URI.encode(@q_params[:q])} if @q_params && @q_params[:q]
     end
     @q_params
     # if @q_params

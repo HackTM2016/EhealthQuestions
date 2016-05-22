@@ -34,8 +34,8 @@
 <script>
 
   var margin = {top: 20, right: 120, bottom: 20, left: 120},
-      width = 960 - margin.right - margin.left,
-      height = 800 - margin.top - margin.bottom;
+      width = 1000 - margin.right - margin.left,
+      height = 1000 - margin.top - margin.bottom;
 
   var i = 0,
       duration = 750,
@@ -52,6 +52,8 @@
       .attr("height", height + margin.top + margin.bottom)
       .append("g")
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+  var current_json = nil;
+
   function render() {
     query = $("#q").val();
     query=query.replace(" ","+");
@@ -75,7 +77,7 @@
     update(root);
   });
 
-  d3.select(self.frameElement).style("height", "800px");
+  d3.select(self.frameElement).style("height", "1000px");
 
   function update(source) {
 
@@ -174,6 +176,7 @@
         $('#q').val(d.name)
         d.children = d._children;
         d._children = null;
+
         render();
       }
 
@@ -188,7 +191,7 @@
       render()
     }
   });
-</script><svg height="800" width="960"><g transform="translate(120,20)"><path d="M0,380C90,380 90,38 180,38" class="link"></path><path d="M0,380C90,380 90,114 180,114" class="link"></path><path d="M0,380C90,380 90,190 180,190" class="link"></path><path d="M0,380C90,380 90,266 180,266" class="link"></path><path d="M0,380C90,380 90,342 180,342" class="link"></path><path d="M0,380C90,380 90,418 180,418" class="link"></path><path d="M0,380C90,380 90,494 180,494" class="link"></path><path d="M0,380C90,380 90,570 180,570" class="link"></path><path d="M0,380C90,380 90,646 180,646" class="link"></path><path d="M0,380C90,380 90,722 180,722" class="link"></path><g transform="translate(180,722)" class="node"><circle style="fill: rgb(176, 196, 222);" r="4.5"></circle><text style="fill-opacity: 1;" text-anchor="end" dy=".35em" x="-10">vis</text></g><g transform="translate(180,646)" class="node"><circle style="fill: rgb(176, 196, 222);" r="4.5"></circle><text style="fill-opacity: 1;" text-anchor="end" dy=".35em" x="-10">util</text></g><g transform="translate(180,570)" class="node"><circle style="fill: rgb(176, 196, 222);" r="4.5"></circle><text style="fill-opacity: 1;" text-anchor="end" dy=".35em" x="-10">scale</text></g><g transform="translate(180,494)" class="node"><circle style="fill: rgb(176, 196, 222);" r="4.5"></circle><text style="fill-opacity: 1;" text-anchor="end" dy=".35em" x="-10">query</text></g><g transform="translate(180,418)" class="node"><circle style="fill: rgb(176, 196, 222);" r="4.5"></circle><text style="fill-opacity: 1;" text-anchor="end" dy=".35em" x="-10">physics</text></g><g transform="translate(180,342)" class="node"><circle style="fill: rgb(176, 196, 222);" r="4.5"></circle><text style="fill-opacity: 1;" text-anchor="end" dy=".35em" x="-10">flex</text></g><g transform="translate(180,266)" class="node"><circle style="fill: rgb(176, 196, 222);" r="4.5"></circle><text style="fill-opacity: 1;" text-anchor="end" dy=".35em" x="-10">display</text></g><g transform="translate(180,190)" class="node"><circle style="fill: rgb(176, 196, 222);" r="4.5"></circle><text style="fill-opacity: 1;" text-anchor="end" dy=".35em" x="-10">data</text></g><g transform="translate(180,114)" class="node"><circle style="fill: rgb(176, 196, 222);" r="4.5"></circle><text style="fill-opacity: 1;" text-anchor="end" dy=".35em" x="-10">animate</text></g><g transform="translate(180,38)" class="node"><circle style="fill: rgb(176, 196, 222);" r="4.5"></circle><text style="fill-opacity: 1;" text-anchor="end" dy=".35em" x="-10">analytics</text></g><g transform="translate(0,380)" class="node"><circle style="fill: rgb(255, 255, 255);" r="4.5"></circle><text style="fill-opacity: 1;" text-anchor="end" dy=".35em" x="-10">flare</text></g></g></svg>
+</script><svg height="1000" width="1120"><g transform="translate(120,20)"><path d="M0,380C90,380 90,38 180,38" class="link"></path><path d="M0,380C90,380 90,114 180,114" class="link"></path><path d="M0,380C90,380 90,190 180,190" class="link"></path><path d="M0,380C90,380 90,266 180,266" class="link"></path><path d="M0,380C90,380 90,342 180,342" class="link"></path><path d="M0,380C90,380 90,418 180,418" class="link"></path><path d="M0,380C90,380 90,494 180,494" class="link"></path><path d="M0,380C90,380 90,570 180,570" class="link"></path><path d="M0,380C90,380 90,646 180,646" class="link"></path><path d="M0,380C90,380 90,722 180,722" class="link"></path><g transform="translate(180,722)" class="node"><circle style="fill: rgb(176, 196, 222);" r="4.5"></circle><text style="fill-opacity: 1;" text-anchor="end" dy=".35em" x="-10">vis</text></g><g transform="translate(180,646)" class="node"><circle style="fill: rgb(176, 196, 222);" r="4.5"></circle><text style="fill-opacity: 1;" text-anchor="end" dy=".35em" x="-10">util</text></g><g transform="translate(180,570)" class="node"><circle style="fill: rgb(176, 196, 222);" r="4.5"></circle><text style="fill-opacity: 1;" text-anchor="end" dy=".35em" x="-10">scale</text></g><g transform="translate(180,494)" class="node"><circle style="fill: rgb(176, 196, 222);" r="4.5"></circle><text style="fill-opacity: 1;" text-anchor="end" dy=".35em" x="-10">query</text></g><g transform="translate(180,418)" class="node"><circle style="fill: rgb(176, 196, 222);" r="4.5"></circle><text style="fill-opacity: 1;" text-anchor="end" dy=".35em" x="-10">physics</text></g><g transform="translate(180,342)" class="node"><circle style="fill: rgb(176, 196, 222);" r="4.5"></circle><text style="fill-opacity: 1;" text-anchor="end" dy=".35em" x="-10">flex</text></g><g transform="translate(180,266)" class="node"><circle style="fill: rgb(176, 196, 222);" r="4.5"></circle><text style="fill-opacity: 1;" text-anchor="end" dy=".35em" x="-10">display</text></g><g transform="translate(180,190)" class="node"><circle style="fill: rgb(176, 196, 222);" r="4.5"></circle><text style="fill-opacity: 1;" text-anchor="end" dy=".35em" x="-10">data</text></g><g transform="translate(180,114)" class="node"><circle style="fill: rgb(176, 196, 222);" r="4.5"></circle><text style="fill-opacity: 1;" text-anchor="end" dy=".35em" x="-10">animate</text></g><g transform="translate(180,38)" class="node"><circle style="fill: rgb(176, 196, 222);" r="4.5"></circle><text style="fill-opacity: 1;" text-anchor="end" dy=".35em" x="-10">analytics</text></g><g transform="translate(0,380)" class="node"><circle style="fill: rgb(255, 255, 255);" r="4.5"></circle><text style="fill-opacity: 1;" text-anchor="end" dy=".35em" x="-10">flare</text></g></g></svg>
 </body>
 
 </html>
