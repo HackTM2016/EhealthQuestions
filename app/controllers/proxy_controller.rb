@@ -1,6 +1,8 @@
 require 'faraday'
 class ProxyController < ApplicationController
   rescue_from Exception do |exception|
+    Rails.logger.error exception.to_s
+    
     data = MultiJson.load(open('test/index.json'))
     response.headers['Access-Control-Allow-Origin'] = '*'
     render :json => data
@@ -14,11 +16,8 @@ class ProxyController < ApplicationController
   end
 
   def get_articles(query = nil)
-    pry
     response = getting_articles_with_retry_because_the_solr_is_not_ha_because_it_costs query
     response.is_a? Hash ? response : MultiJson.load(response.body)
-  rescue
-    MultiJson.load(open('test/index.json'))
   end
 
   private
