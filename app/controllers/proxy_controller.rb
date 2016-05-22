@@ -18,13 +18,14 @@ class ProxyController < ApplicationController
   end
 
   def d3dataformatter
-    data = get_articles_docs
+    data = load_json
 
     response.headers['Access-Control-Allow-Origin'] = '*'
-    data = if no_data_found_but_stale_data_allowed?(data)
-             MultiJson.load(open('test/index.json'), symbolize_keys: true)[:response][:docs]
-           end
-    children = data.map{ |e| {name: e[:journalTitle], children: []} }
+    if no_data_found_but_stale_data_allowed?(data)
+      data = MultiJson.load(open('test/index.json'), symbolize_keys: true)
+    end
+
+    children = data[:response][:docs].map{ |e| {name: e[:journalTitle], children: []} }
     render :json => {name: only_q_params[:q], children: children }
   end
 
@@ -77,7 +78,11 @@ class ProxyController < ApplicationController
     end
 
   def only_q_params
-    @q_params ||=params.select { |k, _| k.to_sym == :q }
+    unless @q_params
+      @q_params = params.select { |k, _| k.to_sym == :q }
+      @q_params = {q: URI.encode(@q_params[:q])} if @q_params && @q_params[:q]
+    end
+    @q_params
     # if @q_params
     #   value = @q_params[:q]
     #   {q: value.downcase.gsub(/[^a-z0-9\s]/i, '').split(' ').inject('') {|a, e| a << "body:#{e}" if e != 'body'}}

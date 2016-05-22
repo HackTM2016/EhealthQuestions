@@ -54,6 +54,8 @@
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
   function render() {
     query = $("#q").val();
+    query=query.replace(" ","+");
+
     d3.json("/proxy/d3?stale_data=true&q=body:"+query, function(error, flare) {
     if (error) throw error;
 
