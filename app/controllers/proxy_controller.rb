@@ -1,7 +1,7 @@
 class ProxyController < ApplicationController
   rescue_from Exception do |exception|
-    Rails.logger.info(exception)
-    puts exception
+    Rails.logger.info(exception.to_s)
+    puts exception.to_s
     data = MultiJson.load(open('test/index.json'))
     response.headers['Access-Control-Allow-Origin'] = '*'
     render :json => data
