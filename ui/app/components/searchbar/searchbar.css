@@ -1,0 +1,18 @@
+.searchbar {
+  width: 100%;
+  background-color: #05335C;
+  color: white;
+}
+
+.searchbar .mdl-grid {
+  width: 100%;
+}
+
+.searchbar .mdl-textfield {
+  padding-top: 10px;
+}
+
+.searchbar .hacktm-logo {
+  background: url('./assets/logo2x.png') no-repeat #05335C 50% 50%;
+  background-size: 75%;
+}

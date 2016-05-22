@@ -76,6 +76,9 @@ class ProxyController < ApplicationController
 
   def only_q_params
     @q_params ||=params.select { |k, _| k.to_sym == :q }
-
+    # if @q_params
+    #   value = @q_params[:q]
+    #   {q: value.downcase.gsub(/[^a-z0-9\s]/i, '').split(' ').inject('') {|a, e| a << "body:#{e}" if e != 'body'}}
+    # end
   end
 end

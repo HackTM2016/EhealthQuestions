@@ -1,0 +1,19 @@
+.app .searchbar {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  transition: top .1s ease-in-out;
+}
+
+.app[data-has-node=true] .searchbar {
+  top: 0;
+}
+
+.app .tree {
+  position: absolute;
+  top: 60px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  overflow: auto;
+}

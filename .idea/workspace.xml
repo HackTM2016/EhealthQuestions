@@ -2,11 +2,43 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="39f39b8b-95d9-458a-aeca-a4f5a73555a6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/proxy/drill.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui/app/components/searchbar/assets/logo2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/txt.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui/.npmrc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui/app/app.config.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui/app/app.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui/app/app.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui/app/components/content-box/content-box.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui/app/components/content-box/content-box.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui/app/components/searchbar/search.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui/app/components/searchbar/searchbar.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui/app/components/searchbar/searchbar.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui/app/components/tree/tree.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui/app/components/tree/tree.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui/app/components/tree/tree.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui/app/config.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui/app/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui/app/main.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui/app/models/node.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui/app/services/api.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui/app/services/articles.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui/app/services/notify.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui/bs-config.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui/build.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui/readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui/server/data/query.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui/server/npm-debug.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui/server/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui/server/src/api.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui/server/src/config.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui/server/src/router.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui/server/src/routes/article-select.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui/server/src/server.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ui/index.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/proxy_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/proxy_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/application.rb" afterPath="$PROJECT_DIR$/config/application.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
     </list>
     <ignored path="hadoop_proxy.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,21 +66,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="proxy_controller.rb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="proxy_controller.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/proxy_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="845">
+              <caret line="81" column="9" selection-start-line="78" selection-start-column="6" selection-end-line="81" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="drill.html.erb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/index.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="1780" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="50702" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="drill.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/proxy/drill.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="755">
-              <caret line="174" column="17" selection-start-line="174" selection-start-column="17" selection-end-line="174" selection-end-column="17" />
+            <state relative-caret-position="252">
+              <caret line="64" column="23" selection-start-line="64" selection-start-column="23" selection-end-line="64" selection-end-column="23" />
               <folding>
                 <element signature="n#style#0;n#circle#0;n#g#0;n#g#0;n#svg#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#text#0;n#g#0;n#g#0;n#svg#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -134,8 +176,8 @@
         <option value="$PROJECT_DIR$/public/drill.html" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/config/application.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/proxy_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/proxy/drill.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/proxy_controller.rb" />
       </list>
     </option>
   </component>
@@ -214,7 +256,63 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hadoop_proxy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hadoop_proxy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hadoop_proxy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hadoop_proxy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hadoop_proxy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hadoop_proxy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hadoop_proxy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hadoop_proxy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hadoop_proxy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="db" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -934,12 +1032,12 @@
       <option name="presentableId" value="Default" />
       <updated>1463890029822</updated>
       <workItem from="1463890032840" duration="1694000" />
-      <workItem from="1463894594487" duration="8779000" />
+      <workItem from="1463894594487" duration="10891000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10473000" />
+    <option name="totallyTimeSpent" value="12585000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
@@ -1038,18 +1136,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/proxy_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/proxy/drill.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="755">
-          <caret line="174" column="17" selection-start-line="174" selection-start-column="17" selection-end-line="174" selection-end-column="17" />
+        <state relative-caret-position="252">
+          <caret line="64" column="23" selection-start-line="64" selection-start-column="23" selection-end-line="64" selection-end-column="23" />
           <folding>
             <element signature="n#style#0;n#circle#0;n#g#0;n#g#0;n#svg#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#text#0;n#g#0;n#g#0;n#svg#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1074,6 +1164,22 @@
             <element signature="n#style#0;n#circle#0;n#g#10;n#g#0;n#svg#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#text#0;n#g#10;n#g#0;n#svg#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/index.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="1780" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="50702" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/proxy_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="845">
+          <caret line="81" column="9" selection-start-line="78" selection-start-column="6" selection-end-line="81" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>

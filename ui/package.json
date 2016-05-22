@@ -1,0 +1,30 @@
+{
+  "jspm": {
+    "directories": {
+      "baseURL": "app"
+    },
+    "dependencies": {
+      "css": "github:systemjs/plugin-css@^0.1.21",
+      "d3": "npm:d3@^3.5.17",
+      "jsx": "npm:jspm-loader-jsx@^0.0.7",
+      "react": "npm:react@^15.0.2",
+      "react-dom": "npm:react-dom@^15.0.2",
+      "react-mdl": "npm:react-mdl@^1.5.4",
+      "systemjs-builder": "npm:systemjs-builder@^0.15.17"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    }
+  },
+  "devDependencies": {
+    "babel-core": "^6.9.0",
+    "jspm": "^0.16.34",
+    "lite-server": "^2.2.0"
+  },
+  "scripts": {
+    "install": "./node_modules/.bin/jspm install",
+    "start": "./node_modules/.bin/lite-server"
+  }
+}

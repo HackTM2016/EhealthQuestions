@@ -1,0 +1,19 @@
+{
+  "name": "",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/api.js",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "~1.15.0",
+    "express": "~4.0.0",
+    "lodash": "^3.8.0",
+    "method-override": "~2.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.9.2"
+  },
+  "scripts": {
+    "start": "./node-modules/.bin/nodemon"
+  }
+}
