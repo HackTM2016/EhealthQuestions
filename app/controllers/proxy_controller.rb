@@ -1,6 +1,8 @@
 require 'faraday'
 class ProxyController < ApplicationController
   rescue_from Exception do |exception|
+    puts exception
+    puts exception.backtrace
     data = MultiJson.load(open('test/index.json'), symbolize_keys: true)
     response.headers['Access-Control-Allow-Origin'] = '*'
     render :json => data
@@ -9,8 +11,8 @@ class ProxyController < ApplicationController
   def index
     data = load_json
     response.headers['Access-Control-Allow-Origin'] = '*'
-    data = if no_data_found_but_stale_data_allowed?(data)
-      MultiJson.load(open('test/index.json'), symbolize_keys: true)
+    if no_data_found_but_stale_data_allowed?(data)
+      data = MultiJson.load(open('test/index.json'), symbolize_keys: true)
     end
     render :json => data
   end
@@ -46,7 +48,7 @@ class ProxyController < ApplicationController
     end
 
     def no_data_found_but_stale_data_allowed?(data)
-      (data.nil? || get_docs(data).empty?)&& !params[:stale_data].nil?
+      params[:stale_data] == true && (data.nil? || data[:response][:numFound] == 0) && params[:stale_data]
     end
 
     def get_articles_docs
